@@ -9,3 +9,4 @@ xdays = xts / 86400
 xhours = xts / 1200
 xminutes = xts / 60
 
+print(xdays)

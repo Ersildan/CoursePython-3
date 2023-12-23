@@ -8,4 +8,7 @@ def foo(i, arg):
         
 def get_the_fastest_func(func, arg):
     return min(func, key=lambda x: foo(x, arg))
-    
+
+
+'''some text'''
+"""вызов функции отдельно"""

@@ -9,5 +9,6 @@ with open('titanic.csv', encoding='utf-8') as file:
             mans.append(d['name'])
         elif d['survived'] == '1' and float(d['age']) < 18 and d['sex'] == 'female':
             women.append(d['name'])
-
+        else:
+            continue
     print(*mans, *women, sep='\n')

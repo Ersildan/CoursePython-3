@@ -13,5 +13,9 @@ with open('name_log.csv', encoding='utf-8') as file:
         res_[key] = res_.get(key, max(val, key=lambda x: x[1]))
 
     lst = sorted(res_.items(), key=lambda x: x[0])
-    new_lst = ['username,email,dtime'] + [f"{i[1][0]},{i[0]},{dt.strftime(i[1][1], pn)}" for i in lst]
-    print(*new_lst, sep='\n')
+    new_lst = [[i[1][0], i[0], dt.strftime(i[1][1], pn)] for i in lst]
+
+    with open('new_name_log.csv', 'w', encoding='utf-8', newline='') as f:
+        writer = csv.writer(f, delimiter=',', quoting=csv.QUOTE_NONE)
+        writer.writerow(['username', 'email', 'dtime'])
+        writer.writerows(new_lst)

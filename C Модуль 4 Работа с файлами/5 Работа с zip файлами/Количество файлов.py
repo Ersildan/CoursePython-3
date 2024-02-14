@@ -1,3 +1,4 @@
-import zipfile
+from zipfile import ZipFile
 
-with open('workbook.zip', encoding='utf-8') as file:
+with ZipFile('workbook.zip') as zip_file:
+    zip_file.printdir()

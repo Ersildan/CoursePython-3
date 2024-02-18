@@ -1,2 +1,1 @@
-Work with zip files
-I try open and chance files inside
+I am learning how to open and modify zip files.

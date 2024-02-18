@@ -1,6 +1,4 @@
 from zipfile import ZipFile
 
-with ZipFile('workbook.zip') as zip_file:
-    zip_file.printdir()
-
-"need open file"
+with ZipFile('workbook.zip') as zp:
+    print(len([file for file in zp.infolist() if not file.is_dir()]))

@@ -22,3 +22,5 @@ with ZipFile('test.zip') as zip_file:
             print(f"{'  ' * n_split}{name[:-1].split('/')[-1]}")
         else:
             print(f"{'  ' * n_split}{name.split('/')[-1]} {foo(wt)}")
+
+'''Необходим зип файл для работы кода'''

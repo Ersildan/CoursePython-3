@@ -6,3 +6,7 @@ data = OrderedDict({'Name': 'Брусника', 'IsNetObject': 'да', 'Operatin
                     'SeatsCount': '10'})
 
 print(OrderedDict(reversed(data.items())))
+
+data2 = OrderedDict(key1='value1', key2='value2', key3='value3')
+
+print(OrderedDict(reversed(data2.items())))

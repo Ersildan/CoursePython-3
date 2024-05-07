@@ -2,17 +2,13 @@ from collections import OrderedDict
 
 
 def custom_sort(ordered_dict, by_values=False):
-    if by_values is False:  # key sorted
-
-        ordered_dict = sorted(ordered_dict, key=lambda x: x[0])
+    if by_values is False:
+        [ordered_dict.move_to_end(k) for k in sorted(ordered_dict)]
     else:
-        ordered_dict = sorted(ordered_dict, key=lambda x: x[1])
-    pass
+        [ordered_dict.move_to_end(k) for k, v in sorted(ordered_dict.items(), key=lambda x: int(x[1]))]
 
-data = OrderedDict(Dustin=29, Anabel=17, Brian=40, Carol=16)
-custom_sort(data)
 
-print(data)
-print()
-print(sorted(data.keys()))
-print(sorted(data.values()))
+data = OrderedDict(Earth=3, Mercury=1, Mars=4, Venus=2)
+custom_sort(data, by_values=True)
+
+print(*data.items())

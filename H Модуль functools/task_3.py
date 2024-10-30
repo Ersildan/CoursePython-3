@@ -1,5 +1,3 @@
-Что покажет приведенный ниже код?
-
 from functools import partial
 
 def add(a, b):

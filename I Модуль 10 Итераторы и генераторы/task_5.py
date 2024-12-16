@@ -4,6 +4,4 @@ def get_min_max(data):
 
 
 iterable = iter(range(10))
-print(get_min_max(iterable))
-
-# (0, 9)
+print(get_min_max(iterable)) #(0, 9)

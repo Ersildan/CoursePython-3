@@ -4,4 +4,4 @@ def parse_ranges(ranges):
     return (j for i in generate_ranges(split_comma_ranges(ranges)) for j in i)
 
 
-print(*parse_ranges('12-14'))
+print(*parse_ranges('12-14')) # exmpl

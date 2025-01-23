@@ -1,10 +1,6 @@
 def filter_names(names, ignor_char, max_names):
-    return (
-        i for i in names
-        if i.lower()[0] != ignor_char
-        and
-        any(j.isdigit() for j in i) == False
-    )
+    lst = (i for i in names if i.lower()[0] != ignor_char.lower() and any(j.isdigit() for j in i) == False)
+    pass
 
 data = ['Dima', 'Timur', 'Arthur', 'Anri20', 'Arina', 'German', 'Ruslan']
 

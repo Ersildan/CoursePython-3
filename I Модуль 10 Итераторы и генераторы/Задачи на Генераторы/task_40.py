@@ -1,7 +1,8 @@
 def with_previous(iterable):
-    for el in iterable:
-        yield (el, n:= None)
-        n = el
+    n = None
+    for i in iterable:
+        yield (i, n)
+        n = i
 
 
 numbers = [1, 2, 3, 4, 5]

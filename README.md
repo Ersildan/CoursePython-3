@@ -1,2 +1,1 @@
-# 3_coursePython2023
-My way to Python #3
+My third year, where I continued to study the Python language.
